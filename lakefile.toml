@@ -1,0 +1,11 @@
+name = "topic2cslib"
+version = "0.1.0"
+defaultTargets = ["Topic2"]
+
+[[lean_lib]]
+name = "Topic2"
+
+[[require]]
+name = "cslib"
+scope = "leanprover"
+rev = "v4.33.0"
