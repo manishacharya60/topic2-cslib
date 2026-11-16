@@ -26,7 +26,7 @@ theorem step_preserves (N : Nat) (s t : State)
 theorem invariant_inductive (N : Nat) : InductiveInvariant (CounterTS N) (counterInv N) :=
   ⟨init_preserves N, step_preserves N⟩
 
-/-- Headline: every finite reachable state is safe, for every natural threshold. -/
+/-- Every finite reachable state is safe, for every natural threshold. -/
 theorem reachable_safe (N : Nat) : Invariant (CounterTS N) (fun s => s.x ≤ N) :=
   invariant_strengthening (CounterTS N) (counterInv N) _ (invariant_inductive N) (fun _ h => h.1)
 

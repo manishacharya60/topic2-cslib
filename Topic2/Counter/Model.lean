@@ -1,6 +1,6 @@
 import Topic2.TransitionSystem
 
-/- Team parameterization of LeanSMV's course counter (see README.md).
+/- Parameterization of LeanSMV's course counter.
    Branch order is identical to the SMV case statements. All guards read s.press;
    the existential chooses s'.press independently, including in initial states.
    Nat deliberately does not bake in the SMV range 0..25 or the desired bound. -/

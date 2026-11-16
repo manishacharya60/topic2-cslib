@@ -9,7 +9,5 @@ docs/
 
 Topic2/TransitionSystem.lean
 Topic2/Counter/Reference.lean
-models/leansmv/
-models/nusmv/
-models/mcmt/
+models/README.md
 experiments/counter/generated.lean

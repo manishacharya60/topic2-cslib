@@ -3,7 +3,7 @@ import Cslib.Foundations.Semantics.LTS.Basic
 
 namespace Topic2.Counter
 
-/-- The label records the freely chosen *next* input, not the current guard input. -/
+/-- The label records the freely chosen next input, not the current guard input. -/
 def counterLTS (N : Nat) : Cslib.LTS State Bool where
   Tr s input t := t.press = input ∧ t.mode = modeNext N s ∧ t.x = countNext N s
 
