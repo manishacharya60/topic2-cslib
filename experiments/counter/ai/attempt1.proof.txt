@@ -1,0 +1,7 @@
+by
+  constructor
+  · rw [htx]
+    omega
+  · intro h
+    rw [htm] at h
+    cases h

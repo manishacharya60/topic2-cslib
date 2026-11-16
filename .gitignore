@@ -1,2 +1,15 @@
 .lake/
 .DS_Store
+.venv/
+.tools/
+__pycache__/
+*.pyc
+
+docs/
+
+Topic2/TransitionSystem.lean
+Topic2/Counter/Reference.lean
+models/leansmv/
+models/nusmv/
+models/mcmt/
+experiments/counter/generated.lean

@@ -1,0 +1,8 @@
+by
+  exact (fun (_ : counterInv N s) (_ : s.mode = .on) (_ : s.press = false) => by
+    constructor
+    · rw [htx]
+      omega
+    · intro h
+      rw [htm] at h
+      cases h) hs hm hp

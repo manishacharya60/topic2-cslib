@@ -1,0 +1,20 @@
+/var/folders/08/7h11z4dn2wl2hjvxlwb87fzw0000gn/T/topic2-replay-w6hfm7z9/Candidate.lean:17:5: error: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/08/7h11z4dn2wl2hjvxlwb87fzw0000gn/T/topic2-replay-w6hfm7z9/Candidate.lean:17:27: error: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/08/7h11z4dn2wl2hjvxlwb87fzw0000gn/T/topic2-replay-w6hfm7z9/Candidate.lean:17:47: error: Variable name `hp` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hp
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'FrozenCounter.increment_preserves' depends on axioms: [propext, Quot.sound]
+Saved candidate Lean exit code: 1

@@ -1,0 +1,2 @@
+'FrozenCounter.increment_preserves' depends on axioms: [propext, Quot.sound]
+Saved candidate Lean exit code: 0

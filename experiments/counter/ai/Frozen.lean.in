@@ -1,0 +1,23 @@
+import Init
+
+namespace FrozenCounter
+inductive Mode where
+  | off | on
+  deriving DecidableEq, Repr
+structure State where
+  mode : Mode
+  press : Bool
+  x : Nat
+  deriving DecidableEq, Repr
+def counterInv (N : Nat) (s : State) : Prop :=
+  s.x ≤ N ∧ (s.mode = .off → s.x = 0)
+
+/-- Preservation for the on / not pressed / below threshold increment branch. -/
+theorem increment_preserves (N : Nat) (s t : State)
+    (hs : counterInv N s) (hm : s.mode = .on) (hp : s.press = false)
+    (hlt : s.x < N) (htm : t.mode = .on) (htx : t.x = s.x + 1) :
+    counterInv N t :=
+__PROOF__
+
+#print axioms increment_preserves
+end FrozenCounter

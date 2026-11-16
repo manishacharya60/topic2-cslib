@@ -1,0 +1,25 @@
+Produce a Lean 4.33.0 proof term replacing __PROOF__ below. Return only the proof term starting with by, without Markdown fences. Do not change any statement, import, or definition. No sorry, admit, axioms, unsafe declarations, native_decide, or external tools. Allowed context: only the declarations below and Lean Init (including its standard logical and Nat lemmas and tactics simp, simp_all, omega, cases, constructor, intro, exact, rw). No project or upstream proof lemmas are allowed. The next press input is unrestricted. This is one isolated proof trial; do not search for an existing solution.
+
+import Init
+
+namespace FrozenCounter
+inductive Mode where
+  | off | on
+  deriving DecidableEq, Repr
+structure State where
+  mode : Mode
+  press : Bool
+  x : Nat
+  deriving DecidableEq, Repr
+def counterInv (N : Nat) (s : State) : Prop :=
+  s.x ≤ N ∧ (s.mode = .off → s.x = 0)
+
+/-- Preservation for the on / not pressed / below threshold increment branch. -/
+theorem increment_preserves (N : Nat) (s t : State)
+    (hs : counterInv N s) (hm : s.mode = .on) (hp : s.press = false)
+    (hlt : s.x < N) (htm : t.mode = .on) (htx : t.x = s.x + 1) :
+    counterInv N t :=
+__PROOF__
+
+#print axioms increment_preserves
+end FrozenCounter
